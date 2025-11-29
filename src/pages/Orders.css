@@ -1,0 +1,183 @@
+.orders-page {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+  background: var(--tg-theme-bg-color, #f2f2f7);
+  color: var(--tg-theme-text-color, #1c1c1e);
+  min-height: 100vh;
+  padding: 12px;
+  padding-bottom: 24px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.orders-header {
+  padding: 12px 0;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--tg-theme-bg-color, #f2f2f7);
+}
+
+
+
+.orders-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--tg-theme-text-color, #1c1c1e);
+  letter-spacing: -0.3px;
+  margin: 0;
+  text-align: center;
+}
+
+.empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--tg-theme-hint-color, #8e8e93);
+}
+
+.empty p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.empty button {
+  background-color: var(--tg-theme-button-color, #007aff);
+  color: var(--tg-theme-button-text-color, #ffffff);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-card {
+  background: var(--tg-theme-secondary-bg-color, #ffffff);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.order-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--tg-theme-text-color, #1c1c1e);
+  flex: 1;
+  line-height: 1.3;
+}
+
+.order-status {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+}
+
+.order-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.order-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.order-row .label {
+  color: var(--tg-theme-hint-color, #8e8e93);
+  font-weight: 500;
+}
+
+.order-row .value {
+  color: var(--tg-theme-text-color, #1c1c1e);
+  font-weight: 600;
+}
+
+.cancel-btn {
+  width: 100%;
+  padding: 12px;
+  background: #ff3b30;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+}
+
+.cancel-btn:active {
+  transform: scale(0.98);
+}
+
+.cancel-btn:hover {
+  opacity: 0.9;
+}
+
+.cancelled-notice {
+  padding: 12px;
+  background: rgba(255, 59, 48, 0.1);
+  border: 2px solid #ff3b30;
+  border-radius: 12px;
+  color: #ff3b30;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 360px) {
+  .orders-page {
+    padding: 10px;
+  }
+
+  .orders-title {
+    font-size: 20px;
+  }
+
+  .order-card {
+    padding: 14px;
+  }
+
+  .order-header h3 {
+    font-size: 16px;
+  }
+}
